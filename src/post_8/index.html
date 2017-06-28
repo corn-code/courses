@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 8</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .3;
+            width: 500px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .wrapper {
+            border: 4px dashed #3498db;
+            height: 400px;
+            width: 800px;
+            overflow: scroll;
+            position: relative;
+        }
+
+        .parent {
+            height: 800px;
+        }
+
+        .child {
+            border: 4px solid #f1c40f;
+            margin: 20px;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+
+        .child1 {
+            position: relative;
+            color: white;
+            left: 0;
+            top: 0;
+        }
+
+        .child2 {
+            position: absolute;
+            top: 0;
+            left: 200px;
+        }
+
+        .child3 {
+            top: 20px;
+            left: 610px;
+            position: sticky;
+        }
+
+        .child4 {
+            top: 66px;
+            left: 410px;
+            position: fixed;
+        }
+
+        .text {
+            color: #34495e;
+            width: 580px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="wrapper">
+    <div class="parent">
+
+        <div class="child child1">
+            relative
+        </div>
+
+        <div class="child child2">
+            absolute
+        </div>
+
+        <div class="child child3">
+            sticky
+        </div>
+
+        <div class="child child4">
+            fixed
+        </div>
+
+        <div class="text">
+            Nunc nisi! Enim risus, tristique, a scelerisque dignissim sit tincidunt dictumst eros etiam urna augue ac,
+            tristique non sit placerat phasellus quis tincidunt et dapibus dolor? Habitasse? Rhoncus ridiculus arcu
+            lundium. Mattis. Scelerisque, velit massa, tincidunt et elementum porttitor, massa, et nascetur ac. Ut
+            integer diam ultricies. Turpis phasellus! Mauris augue montes magna. Amet purus a? Vut a quis, porta ac
+            natoque ut, in facilisis adipiscing dapibus nunc augue, odio porttitor porttitor rhoncus elementum mattis,
+            dapibus enim? Integer pellentesque! Tempor eu proin parturient eros diam aliquet turpis, penatibus nunc,
+            tincidunt nisi mid integer est, tortor. Ut et urna ac, parturient ac eu nisi, aliquam. Sed, sociis ut.
+            Scelerisque pellentesque amet proin penatibus enim duis, porta ultricies lorem, platea risus.
+        </div>
+    </div>
+</div>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="css-sticky" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=once-event-listener">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
