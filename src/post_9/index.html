@@ -48,9 +48,6 @@
             padding: 20px;
         }
 
-        .font-roboto-regular {
-            font-family: 'Roboto-Regular';
-        }
     </style>
     <!-- / Post styles -->
 </head>
@@ -59,40 +56,43 @@
 <!-- Workplace -->
 <div class="workplace">
 
-        <p>
-            Placerat vut scelerisque eros pellentesque ut sed dignissim scelerisque ut in enim? In tristique ultrices
-            nisi mid turpis aenean porta? Sagittis. Pulvinar parturient quis sagittis? Enim nec? Dictumst! Dictumst
-            cursus placerat lacus lectus, dignissim vel aliquet etiam velit cursus? Auctor, placerat lacus lacus rhoncus
-            scelerisque ac turpis sed. Rhoncus, dis odio, velit. Nec tincidunt. Hac tortor! Proin pellentesque proin,
-            penatibus natoque tortor, massa, et proin tristique elementum cursus odio ridiculus integer velit, egestas
-            egestas auctor nascetur montes lorem porttitor amet, velit pid etiam magna! Nec hac in. Montes arcu arcu
-            habitasse in, dolor habitasse, ridiculus turpis, sed magna amet et massa porta facilisis adipiscing integer
-            tortor enim massa, cras integer, magnis cursus tortor. Mus, scelerisque et! Hac aliquet nec sociis.
-        </p>
-        <p>
-            Ridiculus nunc parturient aliquet porta? Cum placerat placerat hac vut porta dignissim? Proin scelerisque
-            eu,placerat nunc cum urna? Odio vel amet enim, magna lundium mid turpis montes placerat, odio lundium
-            aliquet habitasse ac augue. Sed velit in, cum! Et a elementum nisi augue sed vut augue? Etiam lacus placerat
-            nisi ac elementum nec! Elementum! Facilisis non montes aliquam, dis ultricies tempor aliquam. Sit pid sit
-            dis ac. Habitasse urna porta phasellus etiam elementum, porta. Eros diam in placerat. Magna odio enim, ac
-            facilisis mid nascetur! Tincidunt, turpis, ut! Rhoncus dis odio tempor odio nascetur, nisi elementum. Velit
-            dignissim. Montes tempor, integer ac porta, rhoncus egestas augue tristique montes habitasse tempor ac
-            dapibus, elit augue hac dolor pid porta.
-        </p>
+    <p>
+        Placerat vut scelerisque eros pellentesque ut sed dignissim scelerisque ut in enim? In tristique ultrices
+        nisi mid turpis aenean porta? Sagittis. Pulvinar parturient quis sagittis? Enim nec? Dictumst! Dictumst
+        cursus placerat lacus lectus, dignissim vel aliquet etiam velit cursus? Auctor, placerat lacus lacus rhoncus
+        scelerisque ac turpis sed. Rhoncus, dis odio, velit. Nec tincidunt. Hac tortor! Proin pellentesque proin,
+        penatibus natoque tortor, massa, et proin tristique elementum cursus odio ridiculus integer velit, egestas
+        egestas auctor nascetur montes lorem porttitor amet, velit pid etiam magna! Nec hac in. Montes arcu arcu
+        habitasse in, dolor habitasse, ridiculus turpis, sed magna amet et massa porta facilisis adipiscing integer
+        tortor enim massa, cras integer, magnis cursus tortor. Mus, scelerisque et! Hac aliquet nec sociis.
+    </p>
+    <p>
+        Ridiculus nunc parturient aliquet porta? Cum placerat placerat hac vut porta dignissim? Proin scelerisque
+        eu,placerat nunc cum urna? Odio vel amet enim, magna lundium mid turpis montes placerat, odio lundium
+        aliquet habitasse ac augue. Sed velit in, cum! Et a elementum nisi augue sed vut augue? Etiam lacus placerat
+        nisi ac elementum nec! Elementum! Facilisis non montes aliquam, dis ultricies tempor aliquam. Sit pid sit
+        dis ac. Habitasse urna porta phasellus etiam elementum, porta. Eros diam in placerat. Magna odio enim, ac
+        facilisis mid nascetur! Tincidunt, turpis, ut! Rhoncus dis odio tempor odio nascetur, nisi elementum. Velit
+        dignissim. Montes tempor, integer ac porta, rhoncus egestas augue tristique montes habitasse tempor ac
+        dapibus, elit augue hac dolor pid porta.
+    </p>
 
 </div>
 
 <script>
-    let font = new FontFace('Roboto-Regular', 'url(Roboto-Regular.ttf)', {
-        style: 'normal',
-        weight: '400'
-    });
+    let font = new FontFace(
+        'Roboto-Regular',
+        'url(Roboto-Regular.ttf)',
+        {
+            weight: 500
+        }
+    );
 
     document.fonts.add(font);
 
     font.loaded
         .then((fontFace) => {
-            document.body.classList.add('font-roboto-regular');
+            document.body.style.fontFamily = 'Roboto-Regular, serif';
             console.info('Status:', fontFace.status);
         })
         .catch((fontFace) => {
