@@ -3,7 +3,7 @@
 ## Posts
 
 * **Post 8**: CSS
-> `display: sticky;`
+    > `display: sticky;`
 
 * **Post 9**: JS
-> `new FontFace()`
+    > `new FontFace()`
