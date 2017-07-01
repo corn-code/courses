@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 9</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            color: #ecf0f1;
+            border: 4px dashed #3498db;
+            height: 400px;
+            width: 800px;
+            padding: 20px;
+        }
+
+        .font-roboto-regular {
+            font-family: 'Roboto-Regular';
+        }
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+        <p>
+            Placerat vut scelerisque eros pellentesque ut sed dignissim scelerisque ut in enim? In tristique ultrices
+            nisi mid turpis aenean porta? Sagittis. Pulvinar parturient quis sagittis? Enim nec? Dictumst! Dictumst
+            cursus placerat lacus lectus, dignissim vel aliquet etiam velit cursus? Auctor, placerat lacus lacus rhoncus
+            scelerisque ac turpis sed. Rhoncus, dis odio, velit. Nec tincidunt. Hac tortor! Proin pellentesque proin,
+            penatibus natoque tortor, massa, et proin tristique elementum cursus odio ridiculus integer velit, egestas
+            egestas auctor nascetur montes lorem porttitor amet, velit pid etiam magna! Nec hac in. Montes arcu arcu
+            habitasse in, dolor habitasse, ridiculus turpis, sed magna amet et massa porta facilisis adipiscing integer
+            tortor enim massa, cras integer, magnis cursus tortor. Mus, scelerisque et! Hac aliquet nec sociis.
+        </p>
+        <p>
+            Ridiculus nunc parturient aliquet porta? Cum placerat placerat hac vut porta dignissim? Proin scelerisque
+            eu,placerat nunc cum urna? Odio vel amet enim, magna lundium mid turpis montes placerat, odio lundium
+            aliquet habitasse ac augue. Sed velit in, cum! Et a elementum nisi augue sed vut augue? Etiam lacus placerat
+            nisi ac elementum nec! Elementum! Facilisis non montes aliquam, dis ultricies tempor aliquam. Sit pid sit
+            dis ac. Habitasse urna porta phasellus etiam elementum, porta. Eros diam in placerat. Magna odio enim, ac
+            facilisis mid nascetur! Tincidunt, turpis, ut! Rhoncus dis odio tempor odio nascetur, nisi elementum. Velit
+            dignissim. Montes tempor, integer ac porta, rhoncus egestas augue tristique montes habitasse tempor ac
+            dapibus, elit augue hac dolor pid porta.
+        </p>
+
+</div>
+
+<script>
+    let font = new FontFace("Roboto-Regular", "url(Roboto-Regular.ttf)", {
+        style: 'normal',
+        weight: '400'
+    });
+
+    document.fonts.add(font);
+
+    font.loaded
+        .then((fontFace) => {
+            document.body.classList.add('font-roboto-regular');
+            console.info('Success status', fontFace.status);
+        })
+        .catch((fontFace) => {
+            console.info('Error status', fontFace);
+        });
+
+    font.load();
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="font-loading" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=font-loading">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
