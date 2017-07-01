@@ -83,7 +83,7 @@
 </div>
 
 <script>
-    let font = new FontFace("Roboto-Regular", "url(Roboto-Regular.ttf)", {
+    let font = new FontFace('Roboto-Regular', 'url(Roboto-Regular.ttf)', {
         style: 'normal',
         weight: '400'
     });
@@ -93,10 +93,10 @@
     font.loaded
         .then((fontFace) => {
             document.body.classList.add('font-roboto-regular');
-            console.info('Success status', fontFace.status);
+            console.info('Status:', fontFace.status);
         })
         .catch((fontFace) => {
-            console.info('Error status', fontFace);
+            console.info('Status:', fontFace.status);
         });
 
     font.load();
