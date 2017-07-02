@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 7</title>
+    <link rel="stylesheet" type="text/css" href="general.css">
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            margin: 20px;
+        }
+
+        .parent {
+            display: flex;
+            width: 800px;
+            height: 265px;
+            margin: 0 0 20px 0;
+            border: 4px dashed #3498db;
+        }
+
+        .box,
+        .child {
+            border: 4px solid #f1c40f;
+            margin: 20px;
+            color: #fff;
+            padding: 10px;
+            font-size: 32px;
+            line-height: 20px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .child {
+            border-color: #e74c3c;
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+        }
+
+        .box1,
+        .box3 {
+            line-height: 180px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <div class="parent">
+        <div class="box box1">
+            box
+        </div>
+
+        <div class="box box2">
+            <div class="child">
+                gift
+            </div>
+
+            <div class="child">
+                gift
+            </div>
+        </div>
+
+        <div class="box box3">
+            box
+        </div>
+    </div>
+
+    <button
+        id="btn"
+        class="btn"
+        type="button">
+        Add / Remove display: contents;
+    </button>
+</div>
+
+<script>
+    let box2 = document.getElementsByClassName('box2')[0];
+
+    document.getElementById('btn')
+        .addEventListener('click', () => {
+            box2.style.display = box2.style.display === 'contents' ? 'block' : 'contents';
+        }, false);
+
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="css-display-contents" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=css-display-contents">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
