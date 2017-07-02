@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    font-family: Menlo;
+    background-color: #000;
+}
+
+.btn {
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    border: none;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #95a5a6;
+}
+
+.caniuse {
+    opacity: .4;
+    width: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.footer {
+    color: #f1c40f;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+}
