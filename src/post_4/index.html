@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 4</title>
+    <link rel="stylesheet" type="text/css" href="general.css">
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            margin: 20px;
+            color: #fff;
+        }
+
+        .cpu {
+            color: #f1c40f;
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+    The number of logical processors of the user's CPU:
+    <span class="cpu"></span>
+</div>
+
+<script>
+    let workplace = document.getElementsByClassName('cpu')[0];
+
+    workplace.innerHTML = navigator.hardwareConcurrency;
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p
+    class="ciu_embed caniuse"
+    data-feature="hardwareconcurrency"
+    data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=hardwareconcurrency">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
