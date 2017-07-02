@@ -7,3 +7,5 @@
 * **[Post 8](https://github.com/CornCodeCorp/courses/blob/master/src/post_8/index.html)**: CSS - `display: sticky;`
 
 * **[Post 7](https://github.com/CornCodeCorp/courses/blob/master/src/post_7/index.html)**: CSS - `display: contents;`
+
+* **[Post 4](https://github.com/CornCodeCorp/courses/blob/master/src/post_4/index.html)**: JS - `navigator.hardwareConcurrency`
