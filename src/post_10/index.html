@@ -41,11 +41,14 @@
     <style type="text/css" rel="stylesheet">
 
         .workplace {
+            display: inline-block;
             color: #ecf0f1;
             border: 4px dashed #3498db;
-            height: 400px;
-            width: 800px;
             padding: 20px;
+        }
+
+        #canvas {
+            display: block;
         }
 
     </style>
@@ -57,22 +60,56 @@
 <div class="workplace">
 
     <img
+        hidden
         id="image"
         src="faces.jpg"
         alt="faces">
+
+    <canvas id="canvas"></canvas>
 
 </div>
 
 <script>
     window.onload = function () {
+
+        if (!window.FaceDetector) {
+            console.error('Error: FaceDetector not supported');
+            return;
+        }
+
         let image = document.getElementById('image');
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        ctx.drawImage(image, 0, 0, image.width, image.height);
+        ctx.lineWidth = 2;
 
         let faceDetector = new FaceDetector();
 
         faceDetector.detect(image)
-            .then(faces => faces.forEach(face => console.log(face)))
-            .catch(e => {
-                console.error("Boo, Face Detection failed: " + e);
+            .then((faces) => {
+
+                faces.forEach((face) => {
+
+                    face.landmarks.forEach((landmark) => {
+                        ctx.beginPath();
+                        ctx.strokeStyle = '#2ecc71';
+                        ctx.arc(landmark.location.x, landmark.location.y, 5, 0, 2 * Math.PI);
+                        ctx.stroke();
+                    });
+
+                    ctx.beginPath();
+                    ctx.strokeStyle = '#f1c40f';
+                    ctx.rect(face.boundingBox.x, face.boundingBox.y, face.boundingBox.width, face.boundingBox.height);
+                    ctx.stroke();
+                });
+
+            })
+            .catch((e) => {
+                console.error('Error: ' + e);
             });
     }
 
