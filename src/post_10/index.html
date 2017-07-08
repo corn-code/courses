@@ -71,7 +71,7 @@
 <script>
     window.onload = function () {
 
-        if (!window.FaceDetector) {
+        if (window.FaceDetector == undefined) {
             console.error('Error: FaceDetector not supported');
             return;
         }
