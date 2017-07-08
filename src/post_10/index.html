@@ -64,15 +64,17 @@
 </div>
 
 <script>
-    let image = document.getElementById('image');
+    window.onload = function () {
+        let image = document.getElementById('image');
 
-    let faceDetector = new FaceDetector();
+        let faceDetector = new FaceDetector();
 
-    faceDetector.detect(image)
-        .then(faces => faces.forEach(face => console.log(face)))
-        .catch(e => {
-            console.error("Boo, Face Detection failed: " + e);
-        });
+        faceDetector.detect(image)
+            .then(faces => faces.forEach(face => console.log(face)))
+            .catch(e => {
+                console.error("Boo, Face Detection failed: " + e);
+            });
+    }
 
 </script>
 <!-- / Workplace -->
