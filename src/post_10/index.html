@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 10</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            color: #ecf0f1;
+            border: 4px dashed #3498db;
+            height: 400px;
+            width: 800px;
+            padding: 20px;
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <img
+        id="image"
+        src="faces.jpg"
+        alt="faces">
+
+</div>
+
+<script>
+    let image = document.getElementById('image');
+
+    let faceDetector = new FaceDetector();
+
+    faceDetector.detect(image)
+        .then(faces => faces.forEach(face => console.log(face)))
+        .catch(e => {
+            console.error("Boo, Face Detection failed: " + e);
+        });
+
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+</body>
+</html>
