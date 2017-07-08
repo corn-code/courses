@@ -90,8 +90,8 @@
 
         faceDetector.detect(image)
             .then((faces) => draw(faces))
-            .catch((e) => {
-                console.error('Error: ' + e);
+            .catch((error) => {
+                console.error('Error:', error);
             });
 
         function draw (faces) {
