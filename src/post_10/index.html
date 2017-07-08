@@ -89,27 +89,28 @@
         let faceDetector = new FaceDetector();
 
         faceDetector.detect(image)
-            .then((faces) => {
-
-                faces.forEach((face) => {
-
-                    face.landmarks.forEach((landmark) => {
-                        ctx.beginPath();
-                        ctx.strokeStyle = '#2ecc71';
-                        ctx.arc(landmark.location.x, landmark.location.y, 5, 0, 2 * Math.PI);
-                        ctx.stroke();
-                    });
-
-                    ctx.beginPath();
-                    ctx.strokeStyle = '#f1c40f';
-                    ctx.rect(face.boundingBox.x, face.boundingBox.y, face.boundingBox.width, face.boundingBox.height);
-                    ctx.stroke();
-                });
-
-            })
+            .then((faces) => draw(faces))
             .catch((e) => {
                 console.error('Error: ' + e);
             });
+
+        function draw (faces) {
+            faces.forEach((face) => {
+
+                face.landmarks.forEach((landmark) => {
+                    ctx.beginPath();
+                    ctx.strokeStyle = '#2ecc71';
+                    ctx.arc(landmark.location.x, landmark.location.y, 5, 0, 2 * Math.PI);
+                    ctx.stroke();
+                });
+
+                ctx.beginPath();
+                ctx.strokeStyle = '#f1c40f';
+                ctx.rect(face.boundingBox.x, face.boundingBox.y, face.boundingBox.width, face.boundingBox.height);
+                ctx.stroke();
+            });
+
+        }
     }
 
 </script>
