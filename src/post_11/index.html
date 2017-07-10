@@ -59,6 +59,10 @@
             color: #f1c40f;
         }
 
+        .supports i {
+            color: #2ecc71;
+        }
+
     </style>
     <!-- / Post styles -->
 </head>
@@ -68,43 +72,57 @@
 <div class="workplace">
 
     <div class="supports">
-        display: flow-root
+        CSS.supports(
+        <i>'display', 'flow-root'</i>
+        )
         <span>-</span>
         <span id="supports__c0"></span>
     </div>
 
     <div class="supports">
-        (display: contents)
+        CSS.supports(
+        <i>'display: grid'</i>
+        )
         <span>-</span>
         <span id="supports__c1"></span>
     </div>
 
     <div class="supports">
-        display: grid
+        CSS.supports(
+        <i>'(display: contents)'</i>
+        )
         <span>-</span>
         <span id="supports__c2"></span>
     </div>
 
     <div class="supports">
-        font-display: fallback
+        CSS.supports(
+        <i>'font-display', 'fallback'</i>
+        )
         <span>-</span>
         <span id="supports__c3"></span>
     </div>
 
     <div class="supports">
-        image-orientation: flip
+        CSS.supports(
+        <i>'image-orientation', 'flip'</i>
+        )
         <span>-</span>
         <span id="supports__c4"></span>
     </div>
 
     <div class="supports">
-        (display: flex) and (display: contents)
+        CSS.supports(
+        <i>'(display: flex) and (display: contents)'</i>
+        )
         <span>-</span>
         <span id="supports__c5"></span>
     </div>
 
     <div class="supports">
-        (display: flex) or (display: contents)
+        CSS.supports(
+        <i>'(display: flow-root) or (display: contents)'</i>
+        )
         <span>-</span>
         <span id="supports__c6"></span>
     </div>
@@ -114,8 +132,8 @@
 <script>
 
     document.getElementById('supports__c0').innerText = CSS.supports('display', 'flow-root');
-    document.getElementById('supports__c1').innerText = CSS.supports('(display: contents)');
-    document.getElementById('supports__c2').innerText = CSS.supports('display', 'grid');
+    document.getElementById('supports__c1').innerText = CSS.supports('display: grid');
+    document.getElementById('supports__c2').innerText = CSS.supports('(display: contents)');
     document.getElementById('supports__c3').innerText = CSS.supports('font-display', 'fallback');
     document.getElementById('supports__c4').innerText = CSS.supports('image-orientation', 'flip');
     document.getElementById('supports__c5').innerText = CSS.supports('(display: flex) and (display: contents)');
