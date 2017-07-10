@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 11</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            display: inline-block;
+            color: #ecf0f1;
+            border: 4px dashed #3498db;
+            padding: 20px;
+        }
+
+        .supports {
+            color: #7f8c8d;
+        }
+
+        .supports span {
+            color: #34495e;
+        }
+
+        .supports span[id^=supports] {
+            color: #f1c40f;
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <div class="supports">
+        display: flow-root
+        <span>-</span>
+        <span id="supports__c0"></span>
+    </div>
+
+    <div class="supports">
+        display: contents
+        <span>-</span>
+        <span id="supports__c1"></span>
+    </div>
+
+    <div class="supports">
+        display: grid
+        <span>-</span>
+        <span id="supports__c2"></span>
+    </div>
+
+    <div class="supports">
+        font-display: fallback
+        <span>-</span>
+        <span id="supports__c3"></span>
+    </div>
+
+    <div class="supports">
+        image-orientation: flip
+        <span>-</span>
+        <span id="supports__c4"></span>
+    </div>
+
+    <div class="supports">
+        (display: flex) and (display: contents)
+        <span>-</span>
+        <span id="supports__c5"></span>
+    </div>
+
+    <div class="supports">
+        (display: flex) or (display: contents)
+        <span>-</span>
+        <span id="supports__c6"></span>
+    </div>
+
+</div>
+
+<script>
+
+    document.getElementById('supports__c0').innerText = CSS.supports('display', 'flow-root');
+    document.getElementById('supports__c1').innerText = CSS.supports('display', 'contents');
+    document.getElementById('supports__c2').innerText = CSS.supports('display', 'grid');
+    document.getElementById('supports__c3').innerText = CSS.supports('font-display', 'fallback');
+    document.getElementById('supports__c4').innerText = CSS.supports('image-orientation', 'flip');
+    document.getElementById('supports__c5').innerText = CSS.supports('(display: flex) and (display: contents)');
+    document.getElementById('supports__c6').innerText = CSS.supports('(display: flow-root) or (display: contents)');
+
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="css-supports-api" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=css-supports-api">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
