@@ -2,6 +2,8 @@
 
 ## Posts
 
+* **[Post 12](https://github.com/CornCodeCorp/courses/blob/master/src/post_12/index.html)**: CSS - `:focus-within`
+
 * **[Post 11](https://github.com/CornCodeCorp/courses/blob/master/src/post_11/index.html)**: JS - `CSS.supports()`
 
 * **[Post 10](https://github.com/CornCodeCorp/courses/blob/master/src/post_10/index.html)**: JS - `new FaceDetector()`
