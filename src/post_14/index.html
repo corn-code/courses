@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 14</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            display: inline-block;
+            color: #ecf0f1;
+        }
+
+        .btn {
+            display: inline-block;
+            vertical-align: top;
+            height: 40px;
+            padding: 0 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #95a5a6;
+        }
+
+        .upload-form fieldset {
+            border: 4px dashed #3498db;
+            padding: 20px;
+        }
+
+        .upload-form legend {
+            padding: 0 10px;
+        }
+
+        .upload-form input {
+            display: inline-block;
+            vertical-align: top;
+            height: 40px;
+            border: 4px solid #95a5a6;
+            margin: 0 10px 0 0;
+            padding: 5px 10px;
+            font-size: 14px;
+            outline: none;
+            box-shadow: none;
+            width: 220px;
+        }
+
+        .upload-form input:focus {
+            border-color: #f1c40f;
+        }
+
+        #fileList {
+            padding: 20px 0;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <div class="upload-form">
+        <fieldset>
+            <legend>Upload Directory</legend>
+
+            <input
+                id="inputFile"
+                type="file"
+                webkitdirectory>
+
+            <button class="btn">Send</button>
+        </fieldset>
+    </div>
+
+    <div id="fileList">
+        No file chosen
+    </div>
+
+</div>
+
+<script>
+    let fileList = document.getElementById('fileList');
+    let str = '';
+
+    document.getElementById('inputFile').addEventListener('change', (e) => {
+        for (let file of e.target.files) {
+            str += file.webkitRelativePath + '<br>';
+        }
+
+        fileList.innerHTML = str;
+    });
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="input-file-directory" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=input-file-directory">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
