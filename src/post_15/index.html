@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 15</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            display: inline-block;
+            color: #ecf0f1;
+        }
+
+        .pag {
+            color: #7f8c8d;
+        }
+
+        .pad span {
+            color: #34495e;
+        }
+
+        .pad span[id^=pad] {
+            color: #f1c40f;
+        }
+
+        .pad i {
+            color: #2ecc71;
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <!-- padStart() -->
+    <h2>padStart()</h2>
+
+    <div class="pad">
+        'test'.padStart(
+        <i>5</i>
+        )
+        <span>-</span>
+        <span id="pad__e1"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padStart(
+        <i>0</i>
+        )
+        <span>-</span>
+        <span id="pad__e2"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padStart(
+        <i>5, '--+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e3"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padStart(
+        <i>10, '--+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e4"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padStart(
+        <i>10, '+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e5"></span>
+    </div>
+    <!-- / padStart() -->
+
+    <br>
+
+    <!-- padEnd() -->
+    <h2>padEnd()</h2>
+
+    <div class="pad">
+        'test'.padEnd(
+        <i>5</i>
+        )
+        <span>-</span>
+        <span id="pad__e6"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padEnd(
+        <i>0</i>
+        )
+        <span>-</span>
+        <span id="pad__e7"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padEnd(
+        <i>5, '--+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e8"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padEnd(
+        <i>10, '--+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e9"></span>
+    </div>
+
+    <div class="pad">
+        'test'.padEnd(
+        <i>10, '+'</i>
+        )
+        <span>-</span>
+        <span id="pad__e10"></span>
+    </div>
+    <!-- / padEnd() -->
+
+</div>
+
+<script>
+
+    // padStart()
+    document.getElementById('pad__e1').innerHTML = '\'' + 'test'.padStart(5) + '\'';
+    document.getElementById('pad__e2').innerHTML = '\'' + 'test'.padStart(0) + '\'';
+    document.getElementById('pad__e3').innerHTML = '\'' + 'test'.padStart(5, '--+') + '\'';
+    document.getElementById('pad__e4').innerHTML = '\'' + 'test'.padStart(10, '--+') + '\'';
+    document.getElementById('pad__e5').innerHTML = '\'' + 'test'.padStart(10, '+') + '\'';
+
+    // padEnd()
+    document.getElementById('pad__e6').innerHTML = '\'' + 'test'.padEnd(5) + '\'';
+    document.getElementById('pad__e7').innerHTML = '\'' + 'test'.padEnd(0) + '\'';
+    document.getElementById('pad__e8').innerHTML = '\'' + 'test'.padEnd(5, '--+') + '\'';
+    document.getElementById('pad__e9').innerHTML = '\'' + 'test'.padEnd(10, '--+') + '\'';
+    document.getElementById('pad__e10').innerHTML = '\'' + 'test'.padEnd(10, '+') + '\'';
+
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+</body>
+</html>
