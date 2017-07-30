@@ -2,6 +2,8 @@
 
 ## Posts
 
+* **[Post 16](https://github.com/CornCodeCorp/courses/blob/master/src/post_16/index.html)**: CSS - `Conic Gradients`
+
 * **[Post 15](https://github.com/CornCodeCorp/courses/blob/master/src/post_15/index.html)**: JS - `padStart() and padEnd()`
 
 * **[Post 14](https://github.com/CornCodeCorp/courses/blob/master/src/post_14/index.html)**: HTML - `webkitdirectory`
