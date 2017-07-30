@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 16</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            display: inline-block;
+            color: #ecf0f1;
+        }
+
+        .gradients {
+            display: flex;
+        }
+
+        .gradients__item {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .gradient-0 {
+            background: conic-gradient(#f1c40f, #e67e22 45deg);
+        }
+
+        .gradient-1 {
+            background: conic-gradient(#2ecc71 40%, #f1c40f 0deg 75%, #3498db 0deg);
+        }
+
+        .gradient-2 {
+            background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+        }
+
+        .gradient-3 {
+            background: conic-gradient(at 50% 50%, #f1c40f 0%, #34495e 45%, #27ae60 90%);
+        }
+
+        .gradient-4 {
+            background: conic-gradient(from 20deg, #8e44ad, black);
+        }
+
+        .gradient-5 {
+            background: conic-gradient(black 25%, white 0deg 50%, black 0deg 75%, white 0deg);
+            background-size: 30px 30px;
+        }
+
+        .gradient-6 {
+            background: repeating-conic-gradient(#f1c40f, #e67e22 20deg);
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <div class="gradients">
+        <div class="gradients__item gradient-0"></div>
+        <div class="gradients__item gradient-1"></div>
+        <div class="gradients__item gradient-2"></div>
+        <div class="gradients__item gradient-3"></div>
+        <div class="gradients__item gradient-4"></div>
+        <div class="gradients__item gradient-5"></div>
+        <div class="gradients__item gradient-6"></div>
+    </div>
+
+</div>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="css-conic-gradients" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="http://caniuse.com/#feat=css-conic-gradients">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
