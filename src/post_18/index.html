@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn Code / Post 18</title>
+
+    <!-- General styles -->
+    <style type="text/css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            font-family: Menlo, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+        }
+
+        .caniuse {
+            opacity: .4;
+            width: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .footer {
+            color: #f1c40f;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+        }
+    </style>
+    <!-- / General styles -->
+
+    <!-- Post styles -->
+    <style type="text/css" rel="stylesheet">
+
+        .workplace {
+            display: inline-block;
+            color: #ecf0f1;
+        }
+
+        dialog {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+            padding: 10px 15px;
+        }
+
+        dialog::backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        input {
+            height: 35px;
+            border-radius: 8px;
+            box-shadow: none;
+            outline: none;
+            padding: 0 10px;
+            border: 1px solid #cecece;
+        }
+
+        .dialog-signin {
+        }
+
+        .dialog-signin__title {
+            border-bottom: 1px solid #cecece;
+            padding: 0 0 10px 0;
+        }
+
+        .dialog-signin__content {
+            padding: 15px 0 10px 0;
+        }
+
+        .btn-show-dialog {
+        }
+
+        .btn-show-dialog:hover {
+            background-color: #f1c40f;
+        }
+
+    </style>
+    <!-- / Post styles -->
+</head>
+<body>
+
+<!-- Workplace -->
+<div class="workplace">
+
+    <dialog class="dialog-signin">
+        <p class="dialog-signin__title">Sign In</p>
+
+        <div class="dialog-signin__content">
+            <form>
+                <input
+                    type="text"
+                    placeholder="Enter your name">
+                <input
+                    type="password"
+                    placeholder="Enter your password">
+
+                <button
+                    type="button"
+                    class="dialog-signin__apply">
+                    Apply
+                </button>
+
+                <button
+                    type="button"
+                    class="dialog-signin__close">
+                    Close
+                </button>
+            </form>
+        </div>
+    </dialog>
+
+    <button
+        type="button"
+        class="btn-show-dialog">
+        Show Dialog
+    </button>
+
+</div>
+<script>
+    const dialog = document.querySelector('dialog');
+
+    document.querySelector('.btn-show-dialog').onclick = function () {
+        dialog.showModal();
+    };
+
+    document.querySelector('.dialog-signin__close').onclick = function () {
+        dialog.close(JSON.stringify({message: 'Close'}));
+    };
+
+    document.querySelector('.dialog-signin__apply').onclick = function () {
+        dialog.close(JSON.stringify({message: 'Apply'}));
+    };
+
+    dialog.addEventListener('close', function () {
+        console.log('dialog close', this.returnValue);
+    });
+
+    dialog.addEventListener('cancel', function () {
+        console.log('dialog canceled', this.returnValue);
+    });
+</script>
+<!-- / Workplace -->
+
+<div class="footer">Corn Code</div>
+
+<p class="ciu_embed caniuse" data-feature="dialog" data-periods="future_2,future_1,current,past_1,past_2">
+    <a href="https://caniuse.com/#feat=dialog">Can I Use it?</a>
+</p>
+
+<script src="//cdn.jsdelivr.net/caniuse-embed/1.1.0/caniuse-embed.min.js"></script>
+
+</body>
+</html>
