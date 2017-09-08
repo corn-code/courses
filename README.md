@@ -2,6 +2,8 @@
 
 ## Posts
 
+* **[Post 20](https://github.com/CornCodeCorp/courses/blob/master/src/post_20/index.html)**: JS - `rejectionhandled`, `unhandledrejection`
+
 * **[Post 19](https://github.com/CornCodeCorp/courses/blob/master/src/post_19/index.html)**: CSS - `caret-color`
 
 * **[Post 18](https://github.com/CornCodeCorp/courses/blob/master/src/post_18/index.html)**: HTML - `Dialog Element`
