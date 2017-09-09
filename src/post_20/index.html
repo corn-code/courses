@@ -88,13 +88,13 @@
         Promise.reject('File is not found');
     });
 
-    window.addEventListener('rejectionhandled', (event) => {
+    window.onrejectionhandled = (event) => {
         events.innerHTML += '<br>rejectionhandled: ' + event.reason;
-    });
+    };
 
-    window.addEventListener('unhandledrejection', (event) => {
+    window.onunhandledrejection = () => {
         events.innerHTML +=  '<br>unhandledrejection: ' + event.reason;
-    });
+    };
 
 </script>
 <!-- / Workplace -->
