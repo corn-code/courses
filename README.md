@@ -2,6 +2,8 @@
 
 ## Posts
 
+* **[Post 22](https://github.com/CornCodeCorp/courses/blob/master/src/post_22/index.html)**: JS - `console.group()`
+
 * **[Post 20](https://github.com/CornCodeCorp/courses/blob/master/src/post_20/index.html)**: JS - `rejectionhandled`, `unhandledrejection`
 
 * **[Post 19](https://github.com/CornCodeCorp/courses/blob/master/src/post_19/index.html)**: CSS - `caret-color`
